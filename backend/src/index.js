@@ -12,7 +12,7 @@ const app = express();
 
 // Middleware for handling CORS policy:
 const corsOptions = {
-    origin: ['https://bookstore-black-mu.vercel.app/', 'https://bookstore.apps.net.ng', 'http://localhost:5173', 'https://bookstore-art4u.onrender.com'], 
+    origin: ['https://bookstore-black-mu.vercel.app/', 'https://bookstore.apps.net.ng', 'http://localhost:5173', 'https://bookreader-l9q7.onrender.com'], 
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow credentials (like cookies) to be sent
     allowedHeaders: ['Content-Type, Authorization']
