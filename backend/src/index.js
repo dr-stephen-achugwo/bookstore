@@ -11,17 +11,15 @@ const PORT = process.env.PORT || 5555;
 const app = express();
 
 // Middleware for handling CORS policy:
-// Option 1: Allow all origins with default of cors(*)
-// Option 2: Allow custom origins
-// app.use(
-//   cors({
-//     origin: 'http://localhost:3000',
-//     methods: ['GET, POST, PUT, PATCH, DELETE'],
-//     allowedHeaders: ['Content-Type, Authorization'],
-//   })
-// )
+const corsOptions = {
+    origin: ['https://bookstore-black-mu.vercel.app/', 'https://bookstore.apps.net.ng', 'http://localhost:5173', 'https://bookstore-art4u.onrender.com'], 
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Allow credentials (like cookies) to be sent
+    allowedHeaders: ['Content-Type, Authorization']
+};
+// Enable CORS for all routes
+app.use(cors(corsOptions));
 
-app.use(cors());
 
 // Parse JSON requests
 app.use(express.json());
